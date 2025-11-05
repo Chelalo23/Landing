@@ -1,0 +1,92 @@
+---
+import { Wrench, Droplets, Gauge, Battery, AlertTriangle } from "lucide-react";
+---
+
+<section class="bg-gray-50 py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+      Consejos y Cuidados del Auto 🚗
+    </h2>
+    <p class="text-gray-600 mb-12">
+      En AutoFix queremos que tu vehículo se mantenga en perfectas condiciones.
+      Sigue estos consejos de nuestros expertos mecánicos.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div
+        class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-1 transition"
+      >
+        <div
+          class="flex items-center justify-center bg-blue-100 w-14 h-14 rounded-full mx-auto mb-4"
+        >
+          <Wrench class="w-7 h-7 text-blue-600" />
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Revisión general</h3>
+        <p class="text-gray-600">
+          Realiza una inspección completa cada 6 meses para prevenir fallos
+          inesperados y alargar la vida útil del motor.
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div
+        class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-1 transition"
+      >
+        <div
+          class="flex items-center justify-center bg-green-100 w-14 h-14 rounded-full mx-auto mb-4"
+        >
+          <Droplets class="w-7 h-7 text-green-600" />
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Cambio de aceite</h3>
+        <p class="text-gray-600">
+          Cambia el aceite cada 5.000 km para mantener la lubricación óptima del
+          motor y evitar desgastes prematuros.
+        </p>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-1 transition"
+      >
+        <div
+          class="flex items-center justify-center bg-yellow-100 w-14 h-14 rounded-full mx-auto mb-4"
+        >
+          <Gauge class="w-7 h-7 text-yellow-600" />
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Presión de llantas</h3>
+        <p class="text-gray-600">
+          Verifica la presión cada semana. Unas llantas bien infladas mejoran el
+          rendimiento y reducen el consumo de gasolina.
+        </p>
+      </div>
+      <!-- Card 4 -->
+      <div
+        class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-1 transition"
+      >
+        <div
+          class="flex items-center justify-center bg-red-100 w-14 h-14 rounded-full mx-auto mb-4"
+        >
+          <Battery class="w-7 h-7 text-red-600" />
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Estado de la batería</h3>
+        <p class="text-gray-600">
+          Revisa los bornes y la carga de la batería. Si tu auto tarda en
+          encender, podría ser hora de un reemplazo.
+        </p>
+      </div>
+      <!-- Card 5 -->
+      <div
+        class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-1 transition"
+      >
+        <div
+          class="flex items-center justify-center bg-orange-100 w-14 h-14 rounded-full mx-auto mb-4"
+        >
+          <AlertTriangle class="w-7 h-7 text-orange-600" />
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Frenos y seguridad</h3>
+        <p class="text-gray-600">
+          Si escuchas ruidos al frenar o sientes vibraciones, ven a AutoFix para
+          una revisión de frenos inmediata.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
