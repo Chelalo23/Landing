@@ -4,36 +4,136 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Consejos from "../components/Consejos.astro";
 ---
 
-<BaseLayout title="Inicio">
-  <!-- HERO -->
-  <section id="inicio" class="text-center py-20 bg-gradient-to-r from-blue-700 to-blue-500 text-white rounded-2xl shadow-md">
-    <h2 class="text-5xl font-bold mb-4">AutoFix Taller Mecánico</h2>
-    <p class="text-lg mb-6">Reparamos tu vehículo con precisión, confianza y rapidez.</p>
-   
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoFix - Taller Mecánico y Pintura</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="text-3xl">🔧</span>
+        <h1 class="text-2xl font-bold text-blue-700">AutoFix</h1>
+      </div>
+      <div class="hidden md:flex space-x-8 items-center">
+        <div class="relative group">
+          <a href="#servicios" class="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition">
+            <span>🛠️</span> Servicios
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div class="absolute top-full left-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <a href="#pintura" class="block px-4 py-3 hover:bg-blue-50 transition rounded-lg">
+              🎨 Pintura
+            </a>
+          </div>
+        </div>
+        <a href="#proceso" class="text-gray-700 hover:text-blue-600 transition">
+          <span>⚙️</span> Proceso
+        </a>
+        <a href="#inicio" class="text-gray-700 hover:text-blue-600 transition">
+          <span>⭐</span> Inicio
+        </a>
+        <a href="#contacto" class="text-gray-700 hover:text-blue-600 transition">
+          <span>✉️</span> Contacto
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Texto principal -->
+        <div>
+          <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            ⚡ ATENCIÓN RÁPIDA
+          </div>
+          <h2 class="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Servicios de mecánica y pintura automotriz
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            Más de 15 años ofreciendo servicios de mecánica y pintura profesional. 
+            Calidad, métodos profesionales y garantía en todas nuestras reparaciones.
+          </p>
+
+          <!-- Botones de acción -->
+          <div class="flex flex-wrap gap-4">
+            <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center gap-2 shadow-lg">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Contactar por WhatsApp
+            </a>
+            <a href="#precios" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition border-2 border-blue-600 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              Pedir presupuesto
+            </a>
+          </div>
+        </div>
+
+        <!-- Tarjeta de ubicación -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8">
+          <div class="flex items-start gap-3 mb-6">
+            <span class="text-3xl">📍</span>
+            <div>
+              <h3 class="font-bold text-xl text-gray-900 mb-2">Av. Principal 123, Local 5</h3>
+              <p class="text-gray-600">aqui mismo - Colombia</p>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com" target="_blank" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Ver en Google Maps
+          </a>
+
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <h4 class="font-semibold text-gray-900 mb-3">Horario de atención:</h4>
+            <div class="space-y-2 text-gray-600">
+              <p>🕐 Lun - Vie: 8:00 AM - 6:00 PM</p>
+              <p>🕐 Sábados: 9:00 AM - 2:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  
 
   <!-- SERVICIOS -->
-  <section id="servicios" class="mt-20">
-    <h3 class="text-3xl font-bold text-center mb-10 text-blue-700">Nuestros Servicios</h3>
+  <section id="servicios" class="py-20">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-10 text-blue-700">Nuestros Servicios</h3>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
-        <img src="/images/mantenimiento.png" alt="Mantenimiento" class="w-20 mx-auto mb-4" />
-        <h4 class="text-xl font-semibold mb-2">Mantenimiento Preventivo</h4>
-        <p>Evita fallas y alarga la vida útil de tu vehículo con nuestros servicios completos.</p>
-      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
+          <img src="/images/mantenimiento.png" alt="Mantenimiento" class="w-20 mx-auto mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Mantenimiento Preventivo</h4>
+          <p>Evita fallas y alarga la vida útil de tu vehículo con nuestros servicios completos.</p>
+        </div>
 
-      <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
-        <img src="/images/reparacion.png" alt="Reparaciones" class="w-20 mx-auto mb-4" />
-        <h4 class="text-xl font-semibold mb-2">Reparaciones Mecánicas</h4>
-        <p>Solucionamos cualquier problema de motor, suspensión o transmisión.</p>
-      </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
+          <img src="/images/reparacion.png" alt="Reparaciones" class="w-20 mx-auto mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Reparaciones Mecánicas</h4>
+          <p>Solucionamos cualquier problema de motor, suspensión o transmisión.</p>
+        </div>
 
-      <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
-        <img src="/images/pintura.png" alt="Pintura" class="w-20 mx-auto mb-4" />
-        <h4 class="text-xl font-semibold mb-2">Pintura y Detallado</h4>
-        <p>Deja tu auto como nuevo con nuestro servicio de pintura profesional.</p>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
+          <img src="/images/pintura.png" alt="Pintura" class="w-20 mx-auto mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Pintura y Detallado</h4>
+          <p>Deja tu auto como nuevo con nuestro servicio de pintura profesional.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -42,14 +142,80 @@ import Consejos from "../components/Consejos.astro";
   <Consejos />
 
   <!-- CONTACTO -->
-  <section id="contacto" class="mt-20 text-center">
-    <h3 class="text-3xl font-bold text-blue-700 mb-6">Agenda tu cita</h3>
-    <p class="mb-8 text-gray-700">Estamos disponibles de lunes a sábado para atenderte.</p>
+  <section id="contacto" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-700 mb-6">Agenda tu cita</h3>
+      <p class="mb-8 text-gray-700">Estamos disponibles de lunes a sábado para atenderte.</p>
 
-    <a href="https://wa.me/573001234567?text=Hola%20AutoFix,%20quiero%20agendar%20una%20cita!"
-       target="_blank"
-       class="inline-block bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition">
-      💬 Chatear por WhatsApp
-    </a>
+      <a href="https://wa.me/573001234567?text=Hola%20AutoFix,%20quiero%20agendar%20una%20cita!"
+         target="_blank"
+         class="inline-block bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition">
+        💬 Chatear por WhatsApp
+      </a>
+    </div>
   </section>
-</BaseLayout>
+
+  <!-- PRECIOS -->
+  <section id="precios" class="py-20">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h3 class="text-3xl font-bold text-blue-700 text-center mb-6">Lista de Precios</h3>
+      <p class="text-center mb-8 text-gray-700">Consulta los valores de cada servicio antes de agendar tu cita.</p>
+
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-400 to-blue-500 px-6 py-4 text-white font-semibold text-lg grid grid-cols-3">
+          <div>Servicio</div>
+          <div class="text-center">Tiempo</div>
+          <div class="text-center">Precio</div>
+        </div>
+
+        <!-- Lista de servicios -->
+        <div class="divide-y divide-gray-200">
+          <div class="p-6 grid grid-cols-3 items-center hover:bg-gray-50 transition">
+            <div class="font-medium text-gray-900">Alternator Repair</div>
+            <div class="text-center text-gray-700">60min</div>
+            <div class="text-center text-gray-700">$63.00 - $72.00</div>
+          </div>
+
+          <div class="p-6 grid grid-cols-3 items-center hover:bg-gray-50 transition">
+            <div class="font-medium text-gray-900">Brake Light Switch Replacement</div>
+            <div class="text-center text-gray-700">60min</div>
+            <div class="text-center text-gray-700">$92.00 - $105.00</div>
+          </div>
+
+          <div class="p-6 grid grid-cols-3 items-center hover:bg-gray-50 transition">
+            <div class="font-medium text-gray-900">Replacement Filters</div>
+            <div class="text-center text-gray-700">80min</div>
+            <div class="text-center text-gray-700">$83.00 - $91.00</div>
+          </div>
+
+          <div class="p-6 grid grid-cols-3 items-center hover:bg-gray-50 transition">
+            <div class="font-medium text-gray-900">Battery, Starting and Charging Repair</div>
+            <div class="text-center text-gray-700">70min</div>
+            <div class="text-center text-gray-700">$94.00 - $120.00</div>
+          </div>
+
+          <div class="p-6 grid grid-cols-3 items-center hover:bg-gray-50 transition">
+            <div class="font-medium text-gray-900">Car Door Lock Actuator</div>
+            <div class="text-center text-gray-700">60min</div>
+            <div class="text-center text-gray-700">$379.00 - $390.00</div>
+          </div>
+
+          <div class="p-6 grid grid-cols-3 items-center hover:bg-gray-50 transition">
+            <div class="font-medium text-gray-900">Intake Manifold Gaskets</div>
+            <div class="text-center text-gray-700">90min</div>
+            <div class="text-center text-gray-700">$231.00 - $248.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>© {new Date().getFullYear()} AutoFix. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

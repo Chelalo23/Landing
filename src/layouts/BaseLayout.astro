@@ -11,12 +11,31 @@ const { title } = Astro.props;
     <header class="bg-blue-700 text-white p-4 shadow-lg sticky top-0 z-50">
       <nav class="container mx-auto flex justify-between items-center">
         <h1 class="text-2xl font-bold">🔧 AutoFix</h1>
-        <div class="space-x-6">
+        <div class="flex space-x-6 items-center">
           <a href="#inicio" class="hover:text-yellow-300">Inicio</a>
-          <a href="#servicios" class="hover:text-yellow-300">Servicios</a>
+          
+          <!-- Dropdown de Servicios -->
+          <div class="relative group">
+            <a href="#servicios" class="flex items-center gap-1 hover:text-yellow-300 transition">
+              Servicios
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            
+            <!-- Menú desplegable -->
+            <div class="absolute top-full left-0 mt-2 w-48 bg-white text-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a href="pintura" class="block px-4 py-3 hover:bg-blue-50 transition rounded-lg">
+                 Pintura
+              </a>
+            </div>
+          </div>
+
           <a href="#contacto" class="hover:text-yellow-300">Contacto</a>
+          <a href="#precios" class="hover:text-yellow-300">Precios</a>
         </div>
       </nav>
+      
     </header>
 
     <main class="container mx-auto px-4 py-8">
