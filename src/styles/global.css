@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Ícono siempre visible */
+.whatsapp-btn .icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Texto oculto por defecto */
+.whatsapp-btn .text {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 0;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.whatsapp-btn:hover {
+  width: 220px;
+  justify-content: start;
+  padding-left: 15px;
+}
+
+.whatsapp-btn:hover .text {
+  opacity: 1;
+  max-width: 180px;
+  margin-left: 10px;
+}
+
+.whatsapp-btn:hover .icon {
+  transform: rotate(10deg);
+}
+
+/* Animación flotante */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.whatsapp-btn {
+  animation: float 3s ease-in-out infinite;
+}
+
